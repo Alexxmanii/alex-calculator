@@ -5,7 +5,7 @@ import readlineSync from "readline-sync";
 let userName = readlineSync.question(
     chalk.red.bold("May I have your name🤔? ")
 );
-console.log(chalk.red.bold("Hi " + userName + "!👋"));
+console.log(chalk.bgGreen.bold("Hi " + userName + "!👋"));
 
 // Handle the secret text (e.g. password).
 let needCalculator = readlineSync.question(
@@ -76,8 +76,7 @@ class Calculator {
         return Math.cos((0 * Math.PI) / 180);
     }
 }
-//
-//
+
 // Testen der Calculator-Klasse
 const calc = new Calculator();
 //
@@ -123,14 +122,28 @@ console.log(`
                 | | . | 0 | = | | / | |
                 | |___|___|___| |___| |
                 |_____________________|`);
-// function add1(x, y) {
-//     return x + y;
-// }
-console.log(
-    chalk.bgCyan.bold(
-        "\n..............Es IST EIN Dinamk Taschenrechner🙂!..................."
-    )
-);
+ console.log(chalk.bgCyan.bold(`\n ..................Statik Calculator🙂..................`));
+console.log("ratio 5, 7, 300");
+console.log(calc.ratio(5, 7, 300)); // 420
+console.log("percentage 3, 12");
+console.log(calc.percentage(3, 12)); // 25%
+console.log("add 5+7");
+console.log(calc.add(5, 7)); // 12
+console.log("subtract 5, 7");
+console.log(calc.subtract(5, 7)); // 2
+console.log("multiply 5 * 7");
+console.log(calc.multiply(5, 7)); // 35
+console.log("divide 35 / 7");
+console.log(calc.divide(35, 7)); // 5
+console.log("remainder 7,5");
+console.log(calc.remainder(7, 5)); // 2
+console.log("elevate 5³");
+console.log(calc.elevate(5, 3)); // 125
+console.log("sqrt 25");
+console.log(calc.sqrt(25)); // 5
+
+console.log(chalk.bgCyan.bold(
+        "\n..............Es IST EIN Dinamk Taschenrechner🙂!..................."));
 const a = parseInt(
     readlineSync.question(chalk.red.bold("Give me first number : "))
 );
@@ -140,8 +153,13 @@ const b = parseInt(
 const width = parseInt(
     readlineSync.question(chalk.red.bold("Give me width: "))
 );
+//----------------------------------------------------------------------
+// function add1(x, y) {
+//     return x + y;
+// }
 //console.log("add 2number");
 //console.log(chalk.blue(`${add1(a, b)}`));
+//----------------------------------------------------------------------
 console.log("add numbers (Summe)=> number1+number2 :");
 console.log(calc.add(a, b));
 console.log("multiply numbers=> number1*number2 :");
@@ -161,9 +179,7 @@ console.log(calc.elevate(a, b));
 console.log("sqrt (Quadratwurzel)=> number1 Quadratwurzel :");
 console.log(calc.sqrt(a, b));
 //..........Statik Calculator
-console.log(
-    chalk.bgCyan.bold(`\n ..................Statik Calculator🙂................`)
-);
+console.log(chalk.bgCyan.bold(`\n ..................Statik Calculator🙂................`));
 console.log("ratio 5, 7, 300");
 console.log(calc.ratio(5, 7, 300)); // 420
 console.log("percentage 3, 12");
